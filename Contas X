@@ -1,0 +1,15 @@
+public class Main
+{
+	public static void main(String[] args) {
+		float x = -2;
+		
+	    float n = (2 * x) + (3 * x) - (4 * x);
+	    float m = (3 * x) / (4 * x) + (5 * x) - (7 * x);
+	    float z = (5 * x) + ( 6 * x) - (x) + (10 * x);
+	    
+
+		System.out.println ("Questao (N): " + n);
+		System.out.println ("Questao (M): " + m);
+		System.out.println ("Questao (Z): " + z); 
+	}
+}
