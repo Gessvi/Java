@@ -1,0 +1,22 @@
+public class Main
+{
+  public static void main (String[]args)
+  {
+	
+	
+	//Declaração do x
+	float x = -2;
+	
+	//Calculo da equação dentro da variável
+	float equacaoA = 2 * x + 5 * x - 10 * x - (-x - 20) + 40 * x;
+	float equacaoB = 8 * x + 5 + 30 / x - 20 * x - (x - 5 * x - 10 * x);
+	float equacaoC = 100 * x + 5 * x + x + x / 8 - 85 * x - 22 * x;
+	float equacaoD = 10 / x + 8 * x - 12 * x;
+
+	//Exibir resultados 
+
+	  System.out.println ("O resultado da equaC'C#o A  " + equacaoA);
+	  System.out.println ("O resultado da equaC'C#o B C) " + equacaoB);
+	  System.out.println ("O resultado da equaC'C#o C C) " + equacaoC);
+	  System.out.println ("O resultado da equaC'C#o D C) " + equacaoD);
+  }
