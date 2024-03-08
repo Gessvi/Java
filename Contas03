@@ -1,0 +1,17 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	  int n1 = 40;
+	  int n2 = 20;
+		
+	    int soma =  (n1 + n2);
+	     int multiplicacao = (n1 * n2);
+	      float divisao =  (n1 / n2);
+	      
+	       System.out.println("40 + 20 = " + soma);
+	        System.out.println("40 X 20 = " + multiplicacao);
+	        System.out.println("40 / 20 = " + divisao);
+		
+	}
+}
