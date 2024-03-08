@@ -1,0 +1,11 @@
+public class Main
+{
+	public static void main(String[] args) {
+	
+	String conteudoProduto[] = {"Banana", "Cajá", "Goiaba", "Uva", "Morango", "Pêra", "Maçã", "Damasco", "Melão", "Laranja"};
+	
+	System.out.println("Produto 1: " + conteudoProduto[1]);
+	System.out.println(" Produto 3: " + conteudoProduto[3]);
+    System.out.println(" Produto 7: " + conteudoProduto[7]);
+	}
+}
