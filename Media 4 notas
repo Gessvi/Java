@@ -1,0 +1,56 @@
+
+ public class Main
+{
+	public static void main(String[] args) {
+float media = 3;
+	  
+            	  System.out.println ("Media: 3");
+	  
+	  if (media >=7) 
+	   System.out.println("O aluno foi APROVADO sem RECUPERACAO");
+	  else if (media >= 4)
+	   System.out.println("O aluno foi REPROVADO, com direito RECUPERACAO");
+	  else 
+	   System.out.println("O aluno foi REPROVADO sem direito a RECUPERACAO");
+	   
+	                        System.out.println ();
+	   
+float media2 = 5;
+	   
+                	   System.out.println ("Media: 5");
+	   
+	   if (media2 >=7) 
+	   System.out.println("O aluno foi APROVADO sem RECUPERACAO");
+	  else if (media2 >= 4)
+	   System.out.println("O aluno foi REPROVADO, com direito RECUPERACAO");
+	  else 
+	   System.out.println("O aluno foi REPROVADO sem direito a RECUPERACAO");
+	  
+	                        System.out.println ();
+	  
+float media3 = 7;
+
+                        System.out.println ("Media: 7");
+
+        if (media3 >=7) 
+	   System.out.println("O aluno foi APROVADO sem RECUPERACAO");
+	  else if (media3 >= 4)
+	   System.out.println("O aluno foi REPROVADO, com direito RECUPERACAO");
+	  else 
+	   System.out.println("O aluno foi REPROVADO sem direito a RECUPERACAO");
+	   
+	                  System.out.println ();
+	   
+float media4 = 4;
+
+                    System.out.println ("Media: 4");
+
+	  if (media4 >=7) 
+	   System.out.println("O aluno foi APROVADO sem RECUPERACAO");
+	  else if (media4 >= 4)
+	   System.out.println("O aluno foi REPROVADO, com direito RECUPERACAO");
+	  else 
+	   System.out.println("O aluno foi REPROVADO sem direito a RECUPERACAO");
+
+	}
+}
