@@ -1,0 +1,52 @@
+public class Main
+{
+	public static void main(String[] args) {
+	
+	int mes1Pdt1 = 250 , mes2Pdt1 = 500, mes3Pdt1 = 800, mes4Pdt1 = 1200;
+	int trPdt1 = 6, lrPdt1 = 85, eaPdt1 = 100;
+	
+	int mes1Pdt2 = 700 , mes2Pdt2 = 900, mes3Pdt2 = 1300, mes4Pdt2 = 1600;
+	int trPdt2 = 8, lrPdt2 = 90, eaPdt2 = 150;
+	
+	int mes1Pdt3 = 900 , mes2Pdt3 = 1600, mes3Pdt3 = 2100, mes4Pdt3 = 1700;
+	int trPdt3 = 9, lrPdt3 = 120, eaPdt3 = 60;
+		
+	float vmd = 0, emin = 0, emax = 0;
+
+    //---------------------PRODUTO 1--------------------------
+	vmd = ((mes1Pdt1 + mes2Pdt1	+ mes3Pdt1 + mes4Pdt1)/ 4)/25;  
+	emin = 	vmd * trPdt1;
+	emax = 	emin + lrPdt1;
+    System.out.println("Venda média diária Produto 1: " + vmd + ", Estoque minimo: " + emin + ", Estoque Max: " + emax);
+    if (eaPdt1 > emin){
+        System.out.println("Não Comprar!");
+    } 
+    else{
+        System.out.println("Comprar!");
+    }
+
+    //---------------------PRODUTO 2--------------------------
+    vmd = ((mes1Pdt2 + mes2Pdt2	+ mes3Pdt2 + mes4Pdt2)/ 4)/25;  
+	emin = 	vmd * trPdt2;
+	emax = 	emin + lrPdt2;
+    System.out.println("Venda média diária Produto 2: " + vmd + ", Estoque minimo: " + emin + ", Estoque Max: " + emax);
+    if (eaPdt2 > emin){
+        System.out.println("Não Comprar!");
+    } 
+    else{
+        System.out.println("Comprar!");
+    }
+
+    //---------------------PRODUTO 3--------------------------
+    vmd = ((mes1Pdt3 + mes2Pdt3	+ mes3Pdt3 + mes4Pdt3)/ 4)/25;  
+	emin = 	vmd * trPdt3;
+	emax = 	emin + lrPdt3;
+    System.out.println("Venda média diária Produto 3: " + vmd + ", Estoque minimo: " + emin + ", Estoque Max: " + emax);
+    if (eaPdt3 > emin){
+        System.out.println("Não Comprar!");
+    } 
+    else{
+        System.out.println("Comprar!");
+    }
+	}
+}
