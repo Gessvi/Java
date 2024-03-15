@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	        Scanner teclado = new Scanner (System.in);
+		System.out.println("Insira o numero 1: ");
+		float n1 = teclado.nextFloat();
+		
+		System.out.println ("Insira o numero 2");
+		float n2 = teclado.nextFloat();
+		
+		System.out.println ();
+		
+		float soma = (n1 + n2);
+		System.out.println ("Resultado: " + soma);
+		
+		teclado.close();
+	}
+}
