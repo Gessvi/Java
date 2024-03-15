@@ -9,9 +9,12 @@ public class Main
 		System.out.println ("Insira o numero 2");
 		float n2 = teclado.nextFloat();
 		
+		System.out.println ("Insira o numero 3: ");
+		float n3 = teclado.nextFloat();
+		
 		System.out.println ();
 		
-		float soma = (n1 + n2)/2;
+		float soma = (n1 + n2+n3)/3;
 		System.out.println ("Resultado: " + soma);
 		
 		if (soma >= 7)
