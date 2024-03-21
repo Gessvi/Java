@@ -1,17 +1,26 @@
-
+import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-	  int n1 = 40;
-	  int n2 = 20;
+	        Scanner teclado = new Scanner (System.in);
+	        
+	        
+	        System.out.println ("Insira seu 1° numero");
+	        int n1 = teclado.nextInt();
+	        
+	        System.out.println ("Insira seu 2° numero");
+	        int n2 = teclado.nextInt();
 		
 	    int soma =  (n1 + n2);
-	     int multiplicacao = (n1 * n2);
-	      float divisao =  (n1 / n2);
+	     float multiplicacao = (n1 * n2);
+	      float subtracao =  (n1 - n2);
+	      float divisão = (n1 / n2);
 	      
 	       System.out.println("40 + 20 = " + soma);
 	        System.out.println("40 X 20 = " + multiplicacao);
-	        System.out.println("40 / 20 = " + divisao);
-		
+	        System.out.println("40 - 20 = " + subtracao);
+	        System.out.println ("40 / 20 = " + divisão);
+
+		teclado.close();
 	}
 }
