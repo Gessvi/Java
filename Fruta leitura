@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	        Scanner teclado = new Scanner (System.in);
+	
+	String[] Produto = ("Banana" , "Cajá" , "Goiaba" , "Uva" , "Morango" , "Pera" , "Maçã" , "Damasco" , "Melão" , "Laranja") ;
+	
+System.out.println("Insira o numero desejado: ");
+int escolha = teclado.nextInt();
+
+System.out.println ("Resultado: " + escolha)
+	///System.out.println (Produto[1]);
+	//System.out.println (Produto[3]);
+	//System.out.println (Produto[7]);
+	
+
+		teclado.close();
+	}
+}
