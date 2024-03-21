@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	        Scanner teclado = new Scanner (System.in);
+	        
+		System.out.println("Insira o numero 1: ");
+		float n1 = teclado.nextFloat();
+		
+		System.out.println ("Insira o numero 2");
+		float n2 = teclado.nextFloat();
+		
+		System.out.println ("Insira o numero 3: ");
+		float n3 = teclado.nextFloat();
+		
+		float media  = (n1 + n2 + n3)/3;
+		System.out.println ("Media 1: " + media);
+		
+		System.out.println ();
+		
+		System.out.println("Insira o numero 1: ");
+		float n4 = teclado.nextFloat();
+		
+		System.out.println ("Insira o numero 2");
+		float n5 = teclado.nextFloat();
+		
+		System.out.println ("Insira o numero 3: ");
+		float n6 = teclado.nextFloat();
+		
+		
+		
+		float media2 = (n4 + n5 + n6)/3;
+		System.out.println ("Media 2: " + media2);
+		 
+		 float soma =(media + media2);
+		 System.out.println ("Soma das Medias: " + soma);
+		 float Resultado = (media + media2)/2;
+		 System.out.println ("Media das Medias: " + Resultado);
+		
+		teclado.close();
+	}
+}
