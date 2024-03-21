@@ -12,15 +12,20 @@ public class Main
 		System.out.println ("Insira o numero 3: ");
 		float n3 = teclado.nextFloat();
 		
+		System.out.println ("Insira a 4º nota: ");
+		float n4 = teclado.nextFloat();
+		
 		System.out.println ();
 		
-		float soma = (n1 + n2+n3)/3;
+		float soma = (n1 + n2+n3+n4)/4;
 		System.out.println ("Resultado: " + soma);
 		
 		if (soma >= 7)
-		System.out.println ("Aprovado!");
+		System.out.println ("Aprovado sem recuperação!");
+		else if (soma >= 4)
+		System.out.println ("Reprovado com recuperação!");
 		else
-		System.out.println ("Reprovado!");
+		System.out.println ("Reprovado sem recuperação");
 		 
 		
 		teclado.close();
