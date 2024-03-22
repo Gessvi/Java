@@ -6,7 +6,7 @@ public class Main
 	    
 	    System.out.println("\tMeses\n");
 	    System.out.println("[1]  Janeiro - Mes de: PRAIA ^_^");
-	    System.out.println("[2]  Junho -  mes de: São João :D");
+	    System.out.println("[2]  Junho -  mes de: São João ");
 	    System.out.println("[3]  Dezembro - Mes de: Ano Novo, Vida Nova *_*");
 	    System.out.println();
 	    System.out.println("Insira o numero: ");
@@ -14,15 +14,17 @@ public class Main
 	    
 	    switch (escolha){
 	        case 1:
-	           System.out.print("Verão - Dia de praia e e Solzão");
+	           System.out.print("Verão - Dia de praia e e Solzão (ɔ◔‿◔)ɔ ♥");
 	           break;
 	    case 2:
-	        System.out.println("Sao Jão - Canjica e Milho");
+	        System.out.println("Sao Jão - Canjica e Milho ʕ•́ᴥ•̀ʔっ");
 	        break;
 	   case 3:
-	       System.out.println("Ano novo Natal - Paipai Nataloel e Champanhe");
+	       System.out.println("Ano novo Natal - Pai Noel e Champanhe 🍾 ");
+	       break;
 	        default:
 	        System.out.println("Mes inexistente -_-");
+	        break;
 	    }
 	
 	
