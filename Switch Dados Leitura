@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner leia = new Scanner (System.in);
+	    
+	    System.out.println("\tDados Cadastrados\n");
+	    System.out.println("================================");
+	    System.out.println("[1]  Saldo da Conta");
+	    System.out.println("[2]  Usuario Cadastrado ");
+	    System.out.println("[3]  Tranferir para Atendente");
+	    System.out.println("================================");
+	    System.out.println();
+	    System.out.println("Insira o numero: ");
+	    int escolha = leia.nextInt();
+	    
+	    switch (escolha){
+	        case 1:
+	           System.out.print("O saldo da conta é de: R$20000 reais");
+	           break;
+	    case 2:
+	        System.out.println("Insira seu nome cadastrado: ");;
+	        String nome = leia.next();
+	        
+	        System.out.println();
+	        
+	        System.out.println("O nome do usuario cadastrado é: " + nome);
+	        break;
+	   case 3:
+	       System.out.println("Iremos te transferir para uma conversa com uma de nossas atendentes");
+	       break;
+	        default:
+	        System.out.println("Opção inexistente -_-");
+	        break;
+	    }
+	
+	
+	leia.close();
+	}
+}
