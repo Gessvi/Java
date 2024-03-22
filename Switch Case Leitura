@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner leia = new Scanner (System.in);
+	    
+	    System.out.println("\tMeses\n");
+	    System.out.println("[1]  Janeiro - Mes de: PRAIA ^_^");
+	    System.out.println("[2]  Junho -  mes de: São João :D");
+	    System.out.println("[3]  Dezembro - Mes de: Ano Novo, Vida Nova *_*");
+	    System.out.println();
+	    System.out.println("Insira o numero: ");
+	    int escolha = leia.nextInt();
+	    
+	    switch (escolha){
+	        case 1:
+	           System.out.print("Verão - Dia de praia e e Solzão");
+	           break;
+	    case 2:
+	        System.out.println("Sao Jão - Canjica e Milho");
+	        break;
+	   case 3:
+	       System.out.println("Ano novo Natal - Paipai Nataloel e Champanhe");
+	        default:
+	        System.out.println("Mes inexistente -_-");
+	    }
+	
+	
+	leia.close();
+	}
+}
