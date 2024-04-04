@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class main {
+static Scanner leia = new Scanner (System.in);
+	
+	public static void main(String[] args) {	
+		int contador = 0;
+		int numero = 0;
+		float soma = 0, media;
+		
+		while (contador < 5) {
+			System.out.printf("Insira a nota:");
+			numero = leia.nextInt();
+			contador++;
+			
+			soma += numero;
+		
+		}
+		media = soma / 5;
+		
+		if (media >= 7) 
+			System.out.printf("Aprovado em Nome do Pai! \n");
+		else
+			System.out.printf("Voce Reprovado \n");
+		
+		leia.close();
+	}
+	
+
+}
