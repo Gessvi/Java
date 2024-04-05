@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {	
+    Scanner leia = new Scanner (System.in);
+    
+		int n = 0;
+		float soma = 0, media;
+		for (int j = 1; j <= 2; j++){
+    		for (int i = 1; i <= 5; i++) {
+    			System.out.println("Insira a " +i+ " º nota do aluno " +j);
+    			n = leia.nextInt();
+    			soma += n;
+    		}
+		media = soma / 5;
+		System.out.println("Media:" + media);
+		
+		if (media >= 7){ 
+			System.out.println ("Aprovado");}
+		else if (media >= 4){
+			System.out.println ("Recuperação");}
+		else{
+		    System.out.println ("Reprovado");}
+		    soma = 0;
+		}
+		leia.close();
+	}
+}
+
