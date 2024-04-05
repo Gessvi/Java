@@ -1,0 +1,38 @@
+FOR→
+public class Main
+{
+	public static void main(String[] args) {
+ 
+   
+        for (int impar =  1; impar <= 70 ; impar++){
+            
+        if (impar % 2 != 0){
+          System.out.println("Numeros impares:" +impar);}
+        }
+	}
+}
+
+
+        
+    
+
+
+
+
+
+
+
+
+WHILE ->
+public class Main
+{
+public static void main(String[] args) {
+		int numeros = 0;
+		while(numeros <= 70){
+		    if (numeros % 2 == 1){
+		        System.out.println(numeros);
+		    } 
+		        numeros++;
+		}
+	}
+}
