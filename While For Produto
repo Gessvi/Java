@@ -1,0 +1,110 @@
+WHILE
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+	
+	    int numMeses = 4;
+		int contador = 0;
+	    int totalMeses = 0;
+	    int meses = 0;
+	    
+	   System.out.println("Digite o nome do produto: ");
+	   String nomeProduto = leia.next();
+	    
+	   while (contador < numMeses ) {
+	       contador++;
+		    System.out.println("Digite o " + contador +"º mês : ");
+			meses = leia.nextInt();
+			totalMeses += meses;
+	   }	
+	    
+	                                                                                                            
+	    System.out.println("Digite o tempo de reposição: ");
+		int TR = leia.nextInt();
+		
+		System.out.println("Digite o lote de reposição: ");
+		int LR = leia.nextInt();
+		
+		System.out.println("Digite o estoque atual: ");
+		int EA = leia.nextInt();
+		
+		System.out.println("\n\n\n\n ");
+		
+		int VMD = 0 , EMIN = 0, EMAX = 0;
+	  
+		VMD = ((totalMeses / numMeses))/25;
+	    EMIN = VMD * TR;
+	    EMAX = EMIN + LR;
+	   
+	    System.out.println("Produto: " +nomeProduto);                                                                                                                    
+	    System.out.println("VENDA MÉDIA DIÁRIA: " +VMD);     
+	    System.out.println("ESTOQUE MÍNIMO: " +EMIN);         
+	    System.out.println("ESTOQUE MÁXIMO: " +EMAX);        
+	    
+	    if (EA > EMIN)                                      
+	    System.out.println("--Não Comprar");                   
+	    else                                              
+	    System.out.println("--Comprar");   
+	    
+	    System.out.println();
+
+	    leia.close();
+	}
+
+}
+
+FOR
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+	
+		
+	    int totalMeses = 0;
+	    
+	   System.out.println("Digite o nome do produto: ");
+	   String nomeProduto = leia.next();
+	    
+	   for (int i = 1;i <= 4 ;i++ ) {
+		    System.out.println("Digite o " + i +"º mês : ");
+			int meses = leia.nextInt();
+			totalMeses += meses;
+	   }	
+	    
+	 
+	    System.out.println("Digite o tempo de reposição: ");
+		int TR = leia.nextInt();
+		
+		System.out.println("Digite o lote de reposição: ");
+		int LR = leia.nextInt();
+		
+		System.out.println("Digite o estoque atual: ");
+		int EA = leia.nextInt();
+		
+		System.out.println("\n\n\n\n ");
+		
+		int VMD = 0 , EMIN = 0, EMAX = 0;
+	  
+		VMD = ((totalMeses)/4)/25;
+	    EMIN = VMD * TR;
+	    EMAX = EMIN + LR;
+	    
+	    System.out.println("Produto: " + nomeProduto);
+	    System.out.println("VENDA MÉDIA DIÁRIA: " +VMD);     
+	    System.out.println("ESTOQUE MÍNIMO: " +EMIN);         
+	    System.out.println("ESTOQUE MÁXIMO: " +EMAX);        
+	    
+	    if (EA > EMIN)                                      
+	    System.out.println("--Não Comprar");                   
+	    else                                              
+	    System.out.println("--Comprar");   
+	    
+	    System.out.println();
+
+	    leia.close();
+	}
+
+}
