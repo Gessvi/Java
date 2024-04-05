@@ -1,0 +1,51 @@
+COM WHILE
+import java.util.Scanner;
+
+//com WHILE
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		float numero, somaNumero = 0, mediaNumero = 0;;
+		int contador = 0;
+		
+		while(contador < 8){
+		System.out.println("Digite o "+ (contador+1) +"º número: ");
+		numero = input.nextFloat();
+	    somaNumero = somaNumero + numero;
+	    contador++;
+		}
+		
+	 mediaNumero = somaNumero/(float) contador;
+	 
+	 System.out.println("A soma dos números é igual a: " + somaNumero);
+	 System.out.println("A média dos números é igual a: " + mediaNumero);
+	 
+	}
+}
+COM FOR
+import java.util.Scanner;
+
+//com FOR
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		float numero, somaNumero = 0, mediaNumero = 0;;
+		int i;
+		
+		for(i=0; i<8; i++){
+		System.out.println("Digite o "+ (i+1) +"º número: ");
+		numero = input.nextFloat();
+	    somaNumero = somaNumero + numero;
+		}
+		
+	 mediaNumero = somaNumero/(float) i;
+	 
+	 System.out.println("A soma dos números é igual a: " + somaNumero);
+	 System.out.println("A média dos números é igual a: " + mediaNumero);
+	 
+	}
+}
