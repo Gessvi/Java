@@ -30,7 +30,9 @@ public class Programa {
 	System.out.println("Atualização pos Vendas: " +produto.produto+ " Estoque Atual: " +produto.quantidade+ " Preço: " +produto.preco);
 	double lucro;
 	lucro = produto.preco * estoque;
-    	System.out.println ("Lucro Financeiro: " +(float)lucro);
+	System.out.println ("Lucro Financeiro: " +(float)lucro);
+	
+	JOptionPane.showCanFirmDialog(null, "Atualicação com as Vendas: [NomeProduto--"+produto.produto+ "[preço-- "+produto.preco+ "[Estoque-- " +produto.quantidade+ "[Valor Atual do Estoque-- " +produto.preco * produto.quantidade);
 	
 	leia.close();
 	}
