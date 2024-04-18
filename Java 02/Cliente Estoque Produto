@@ -60,7 +60,7 @@ public class Programa {
 			
 			System.out.println ();
 			
-			System.out.println ("Lucro Financeiro" +(float)lucro);
+			System.out.println ("Lucro Financeiro: " +(float)lucro);
 			
 			leia.close();
 
