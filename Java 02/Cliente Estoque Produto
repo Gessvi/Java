@@ -1,5 +1,6 @@
 package aplicacao;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class Programa {
 
 	public static void main(String[] args) {
@@ -24,11 +25,12 @@ public class Programa {
 			
 			System.out.println("========================================================================================================");
 			
-			System.out.println ("Quantidade de clientes inseridos no cadastro: ");
+			System.out.println("Quantidade de clientes cadastrados: ");
+			cliente.quantidadeP = leia.nextDouble();
+			
+			System.out.println ("Quantidade de clientes adicionados: ");
 			int cadastro = leia.nextInt();
 			cliente.adcCliente (cadastro);
-			
-			System.out.println ("Clientes Cadastrados: " +cliente.quantidadeP);	
 			
 			System.out.println();
 			
@@ -62,6 +64,8 @@ public class Programa {
 			
 			System.out.println ("Lucro Financeiro: " +(float)lucro);
 			
+			JOptionPane.showConfirmDialog(null, "Atualização pos venda: " +produto.produto+ "  Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco+ " || Valor Atual do Estoque: " +produto.preco * produto.quantidade);
+
 			leia.close();
 
 
