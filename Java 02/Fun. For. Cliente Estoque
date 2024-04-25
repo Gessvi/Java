@@ -1,5 +1,6 @@
 package aplicacao;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class Empresa {
 
 	public static void main(String[] args) {
@@ -42,13 +43,15 @@ public class Empresa {
 		System.out.println("Insira o seu tempo de comsumidor com a empresa: ");
 		cliente.tempo = leia.nextDouble();
 		
-		System.out.println ("Nome: " +cliente.cliente+ " || Clientes Atualizado: " +cliente.quantidadeC+ " || Tempo: " +cliente.tempo);
+		System.out.println ("Nome: " +cliente.cliente+ " || Clientes Atualizado: " +cliente.quantidadeC+ " || Tempo: " +cliente.tempo+ " anos");
 		
 		System.out.println ("========================================================================================================");
 		
+		System.out.println ("Insira o id do Funcionario: ");
+		funcionario.IDfuncionario = leia.nextDouble();
+		
 		System.out.println ("Quantidade de Funcionarios Cadastrados: ");
 		funcionario.quantidadeFu = leia.nextDouble();
-		
 		
 		System.out.println ("Quantidade de Funcionarios Adicionados: ");
 		int cadastroFun = leia.nextInt();
@@ -61,11 +64,14 @@ public class Empresa {
 		System.out.println("Salario Mensal do Funcionario: ");
 		funcionario.salario = leia.nextDouble();
 		
-		System.out.println ("Funcionarios Atualizado: " +funcionario.quantidadeFu+ " || Salario Mensal: " +funcionario.salario);
+		System.out.println ("ID do Funcionario: "+funcionario.IDfuncionario+ " || Funcionarios Atualizado: " +funcionario.quantidadeFu+ " || Salario Mensal: " +funcionario.salario);
 		System.out.println ("=========================================================================================================");
 
+		System.out.println ("ID do Fornecedor: ");
+		fornecedor.IDfornecedor = leia.nextDouble();
+		
 		System.out.println ("Quantidade de Fornecedores Cadastrador: ");
-		funcionario.Funcionario = leia.next();
+		fornecedor.quantidadeF = leia.nextDouble();
 		
 		System.out.println ("Quantidade de fornecedores Adicionados: ");
 		int cadastroFor = leia.nextInt();
@@ -78,7 +84,7 @@ public class Empresa {
 		System.out.println ("Entrada de produtos pelo Fornecedor: ");
 		fornecedor.entrada = leia.nextDouble();
 		
-		System.out.println ("Fornecedor Atualizado: " +fornecedor.quantidadeF+ " || Entrada de produtos: " +fornecedor.entrada);
+		System.out.println ("ID do Fornecedor: " +fornecedor.IDfornecedor+ "||Fornecedor Atualizado: " +fornecedor.quantidadeF+ " || Entrada de produtos: " +fornecedor.entrada);
 		
 		System.out.println ("===========================================================================================================");
 		
@@ -88,28 +94,28 @@ public class Empresa {
 		
 		System.out.println (" Produto: " +produto.produto+ " || Estoque Atual " +produto.quantidade+ " || Preço " +produto.preco);
 		
-		System.out.println ();
-		
 		System.out.println ("Insira a quantidade de vendas: ");
 		estoque = leia.nextInt();
 		produto.subProduto (estoque);
 		
-		System.out.println ("Cliente: " +cliente.cliente+ " || Produto: " +produto.produto+ " || Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco);
+		System.out.println (" Produto: " +produto.produto+ " || Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco);
 		
 		System.out.println("=========================================================================================================");
 		double lucro;
 		lucro = produto.preco * estoque;
 		
 		double gastos;
-		gastos = funcionario.salario - lucro;
+		gastos = lucro - funcionario.salario;
+		
+		double renda;
+		renda = lucro - gastos;
 		
 		System.out.println ();
 		
 		System.out.println ("Lucro Financeiro: " +(float)lucro);
 		System.out.println ("Gastos: " +(float)gastos);
 	
-		
-	System.out.println ( "Atualização pos venda: " +produto.produto+ "  Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco+ " || Valor Atual do Estoque: " +produto.preco * produto.quantidade);
+		JOptionPane.showConfirmDialog (null, "Atualização pos venda: " +produto.produto+ " || ID do Fornecedor:  " +fornecedor.IDfornecedor+ " || ID do Funcionario:  " +funcionario.IDfuncionario+ " || Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco+ " || Valor Atual do Estoque: " +produto.preco * produto.quantidade+ " || Total Final :" +renda);
 
 		leia.close();
 
