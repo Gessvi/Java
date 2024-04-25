@@ -1,0 +1,119 @@
+package aplicacao;
+import java.util.Scanner;
+public class Empresa {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner (System.in);
+		Produto produto = new Produto();
+		Cliente cliente = new Cliente();
+		Fornecedor fornecedor = new Fornecedor();
+		Funcionario funcionario = new Funcionario();
+		
+		
+		System.out.println("Insira o nome do produto: ");
+		produto.produto = leia.next();
+		
+		System.out.println ("Insira a quantidade no estoque: ");
+		produto.quantidade = leia.nextDouble();
+		
+		System.out.println ("Insira o preço do produto: ");
+		produto.preco = leia.nextDouble();
+		
+		System.out.println ("Produto: " +produto.produto+ " || Estoque: " +produto.quantidade+ " || preço: " +produto.preco);
+		
+		System.out.println("========================================================================================================");
+		
+		System.out.println ("Nome do cliente: ");
+		cliente.cliente = leia.next();
+		
+		System.out.println("Quantidade de clientes cadastrados: ");
+		cliente.quantidadeC = leia.nextDouble();
+		
+		System.out.println ("Quantidade de clientes adicionados: ");
+		int cadastro = leia.nextInt();
+		cliente.adcCliente (cadastro);
+		
+		System.out.println();
+		
+		System.out.println ("Quantidade de clientes que cancelaram o cadastro: ");
+		cadastro = leia.nextInt();
+		cliente.subCliente (cadastro);
+	
+		System.out.println("Insira o seu tempo de comsumidor com a empresa: ");
+		cliente.tempo = leia.nextDouble();
+		
+		System.out.println ("Nome: " +cliente.cliente+ " || Clientes Atualizado: " +cliente.quantidadeC+ " || Tempo: " +cliente.tempo);
+		
+		System.out.println ("========================================================================================================");
+		
+		System.out.println ("Quantidade de Funcionarios Cadastrados: ");
+		funcionario.quantidadeFu = leia.nextDouble();
+		
+		
+		System.out.println ("Quantidade de Funcionarios Adicionados: ");
+		int cadastroFun = leia.nextInt();
+		funcionario.adcFuncionario(cadastroFun);
+		
+		System.out.println ("Quantidade de Funcionarios Desligados: ");
+		cadastroFun = leia.nextInt();
+		funcionario.subFuncionario(cadastroFun);
+		
+		System.out.println("Salario Mensal do Funcionario: ");
+		funcionario.salario = leia.nextDouble();
+		
+		System.out.println ("Funcionarios Atualizado: " +funcionario.quantidadeFu+ " || Salario Mensal: " +funcionario.salario);
+		System.out.println ("=========================================================================================================");
+
+		System.out.println ("Quantidade de Fornecedores Cadastrador: ");
+		funcionario.Funcionario = leia.next();
+		
+		System.out.println ("Quantidade de fornecedores Adicionados: ");
+		int cadastroFor = leia.nextInt();
+		fornecedor.adcFornecedor(cadastroFor);
+		
+		System.out.println("Quantidade de Fornecedores que se Desligaram: ");
+		cadastroFor = leia.nextInt();
+		fornecedor.subFornecedor(cadastroFor);
+		
+		System.out.println ("Entrada de produtos pelo Fornecedor: ");
+		fornecedor.entrada = leia.nextDouble();
+		
+		System.out.println ("Fornecedor Atualizado: " +fornecedor.quantidadeF+ " || Entrada de produtos: " +fornecedor.entrada);
+		
+		System.out.println ("===========================================================================================================");
+		
+		System.out.println ("Insira a quantidade de produtos que foram adicionados: ");
+		int estoque = leia.nextInt();
+		produto.adcProduto (estoque);
+		
+		System.out.println (" Produto: " +produto.produto+ " || Estoque Atual " +produto.quantidade+ " || Preço " +produto.preco);
+		
+		System.out.println ();
+		
+		System.out.println ("Insira a quantidade de vendas: ");
+		estoque = leia.nextInt();
+		produto.subProduto (estoque);
+		
+		System.out.println ("Cliente: " +cliente.cliente+ " || Produto: " +produto.produto+ " || Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco);
+		
+		System.out.println("=========================================================================================================");
+		double lucro;
+		lucro = produto.preco * estoque;
+		
+		double gastos;
+		gastos = funcionario.salario - lucro;
+		
+		System.out.println ();
+		
+		System.out.println ("Lucro Financeiro: " +(float)lucro);
+		System.out.println ("Gastos: " +(float)gastos);
+	
+		
+	System.out.println ( "Atualização pos venda: " +produto.produto+ "  Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco+ " || Valor Atual do Estoque: " +produto.preco * produto.quantidade);
+
+		leia.close();
+
+
+}
+
+}
