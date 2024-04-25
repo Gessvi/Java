@@ -1,0 +1,74 @@
+package aplicacao;
+
+public class Produto {
+public String produto;
+public double preco;
+public double quantidade;
+
+public void adcProduto (int estoque) {
+	this.quantidade += estoque;
+}
+
+public void subProduto (int estoque) {
+	this.quantidade -= estoque;
+}
+
+}
+=======================================================
+package aplicacao;
+
+public class Cliente {
+
+	public String cliente;
+	public double tempo;
+	public double quantidadeC;
+
+	public void adcCliente (int cadastro) {
+		this.quantidadeC += cadastro;
+	}
+
+	public void subCliente(int cadastro) {
+		this.quantidadeC -= cadastro;
+	}
+
+	}
+=======================================================
+
+package aplicacao;
+
+public class Funcionario {
+	
+	public String Funcionario;
+	public double IDfuncionario;
+	public double salario;
+	public double quantidadeFu;
+	
+	public void adcFuncionario (int cadastroFun) {
+		this.quantidadeFu += cadastroFun;
+	}
+
+	public void subFuncionario (int cadastroFun) {
+		this.quantidadeFu -= cadastroFun;
+	}
+
+	}
+==================================================
+
+package aplicacao;
+
+public class Fornecedor {
+
+	public String fornecedor;
+	public double IDfornecedor;
+	public double entrada;
+	public double quantidadeF;
+	
+	public void adcFornecedor (int cadastroFor) {
+		this.quantidadeF += cadastroFor;
+	}
+
+	public void subFornecedor (int cadastroFor) {
+		this.quantidadeF -= cadastroFor;
+	}
+
+	}
