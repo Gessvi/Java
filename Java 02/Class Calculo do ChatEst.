@@ -1,0 +1,15 @@
+package vmd;
+public class Calculo {
+
+public String Produto;
+public int somames, tr, vmd, lr, emi, ema;
+public void calculoVMD() {
+vmd = (somames/3)/25;
+}
+public void calculoEmi() {
+emi = tr * vmd;
+}
+public void calculoEma() {
+ema = lr + emi;
+}
+}
