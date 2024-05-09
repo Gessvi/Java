@@ -1,0 +1,48 @@
+package vmd;
+
+import javax.swing.JOptionPane;
+public class Principal {
+public static void main(String[] args) {
+
+Calculo instcal = new Calculo();
+
+int i = 1;
+int somames = 0;
+
+while(i <= 3) {
+String inputMes = JOptionPane.showInputDialog("Insira o valor do " + i + "º mes");
+
+int m = Integer.parseInt(inputMes);
+somames+=m;
+i++;
+}
+
+instcal.somames = somames;
+String inputTr = JOptionPane.showInputDialog("Tempo de reposição");
+instcal.tr = Integer.parseInt(inputTr);
+
+String inputLr = JOptionPane.showInputDialog("Lote de Reposição");
+
+instcal.lr = Integer.parseInt(inputLr);
+String inputEa = JOptionPane.showInputDialog("Estoque Atual");
+
+int ea = Integer.parseInt(inputEa);
+
+instcal.calculoVMD();
+instcal.calculoEmi();
+instcal.calculoEma();
+
+if(ea <= instcal.emi)
+	
+{
+	
+JOptionPane.showConfirmDialog(null, "Resultado/nVMD: " + instcal.vmd + "\nEstoque Mínimo: " + instcal.emi + "\nEstoqueMáximo:" + instcal.ema + "\nÉ necessário realizar compra do produto:");
+
+}else {
+	
+JOptionPane.showConfirmDialog(null, "Resultado\nVMD:" +instcal.vmd + "\nEstoque Mínimo:" + instcal.emi + "\nEstoque Máximo:" + instcal.ema + "\nNão é necessário realizar compra do produto");
+
+}
+}
+
+}
