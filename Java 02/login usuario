@@ -1,0 +1,36 @@
+package aplicacao;
+
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class TesteLogin {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner (System.in);
+		Class instcal = new Class();
+		
+		String login;
+		String username = "gessica";
+		String password = "123";
+		String usernameInput;
+		String passwordInput;
+		
+			
+	usernameInput = JOptionPane.showInputDialog("Password");
+	instcal.password = Integer.parseInt(inputPassword);
+
+					
+	String loginUsername = JOptionPane.showInputDialog("Password");
+			instcal.password = Integer.parseInt(inputUsername);
+			
+		
+		if ((loginUsername == inputUsername) && (loginPassword == inputPassword)) {
+			JOptionPane.showInputDialog ("acess allowed");
+		}else {
+			JOptionPane.showInputDialog ("Username or Password invalid");
+		}
+		
+		}
+	
+	}
+
