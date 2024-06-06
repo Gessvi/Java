@@ -1,0 +1,35 @@
+package aplicacao;
+
+public class Produto {
+
+	public String produto;
+	public double preco;
+	public double quantidade;
+	
+	public void addProduto (int estoque) {
+		this.quantidade+=estoque;
+	}
+
+	public void subProduto (int estoque) {
+		this.quantidade-=estoque;
+	}
+}
+
+package aplicacao;
+
+public class Cliente {
+
+	public String cliente;
+	public double quantidade1;
+	public double cadastro;
+	public double desconto;
+	
+	public void addProduto (int estoque) {
+		this.quantidade1+=estoque;
+	}
+
+	public void subProduto (int estoque) {
+		this.quantidade1-=estoque;
+	}
+}
+
