@@ -1,0 +1,78 @@
+package aplicacao;
+import javax.swing.JOptionPane;
+
+import java.util.Scanner;
+
+public class Empresa {
+
+			public static void main(String[] args) {
+			Scanner leia = new Scanner(System.in);
+			Produto produto = new Produto();
+			Cliente cliente = new Cliente();
+			double desconto = 0;
+			double valorFinal = 0;
+			
+		System.out.println("Insira o nome do produto: ");
+		produto.produto = leia.nextLine();
+		
+		System.out.println("Insira a quantidade do estoque atual: ");
+		produto.quantidade = leia.nextDouble();
+		
+		System.out.println("Insira o preço unitário: ");
+		produto.preco = leia.nextFloat();
+		
+		System.out.println(" \t Resultado: Produto: " + produto.produto+" || estoque atual: "+produto.quantidade+" || preço: "+ produto.preco);
+		
+		System.out.println("Insira a quantidade de produtos adicionados: ");
+		int estoque = leia.nextInt();
+		produto.addProduto(estoque);
+		
+		System.out.println("\t Atualização: Produto: " + produto.produto+" || estoque atual: "+produto.quantidade+" || preço: "+ produto.preco);
+		
+		System.out.println ("Insira o nome do cliente: ");
+		cliente.cliente = leia.next();
+		
+		System.out.println("\n");
+		
+		System.out.println (" \t ===Se o cliente tiver 9 meses de cadastro tem direito a 10% de desconto, se for menos de 9 meses, tem 5% de desconto (Insira apenas os meses de cadastro) ===");
+		
+		System.out.println ("\n");
+		
+		System.out.println("Cliente possui cadastro? Se sim, quanto tempo? ");
+		cliente.cadastro = leia.nextDouble();
+		System.out.println ("Insira a quantidade de produtos vendidos para o cliente");
+		estoque = leia.nextInt(estoque);
+		produto.subProduto(estoque);
+		
+		
+		
+		if (cliente.cadastro >= 9){
+			
+			desconto = produto.preco * 0.10;
+			valorFinal = produto.preco - desconto;
+			System.out.println ("Resultado: " +valorFinal);
+		}else {
+			
+			desconto = produto.preco * 0.05;
+			valorFinal = produto.preco - desconto;
+			System.out.println ("Resultado: " +valorFinal);
+		}
+		
+		System.out.println(" \t Atualização das Vendas: Nome do produto: " +produto.produto+ " || Nome do cliente: " +cliente.cliente+ " || Estoque Atual: " +produto.quantidade+ " || Preço: " +produto.preco+ " || Valor Unitario com Desconto: " +valorFinal);
+		
+		double lucro;
+		lucro = valorFinal * estoque;
+		System.out.println ("Lucro Financeiro: " +(float)lucro);
+		
+		System.out.println ("\n");
+		
+		System.out.println("==== RESULTADO FINAL NA TELA ====");
+
+		JOptionPane.showMessageDialog(null, "\t Atualicação com as Vendas | Nome do Produto "+produto.produto+ " || Nome do cliente" +cliente.cliente+ " || preço "+produto.preco+ "|| Estoque-- " +produto.quantidade+ "|| Valor Atual do Estoque-- " +produto.preco * produto.quantidade);
+		
+		leia.close();
+		
+		
+	}
+
+}
